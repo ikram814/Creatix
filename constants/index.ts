@@ -39,6 +39,10 @@ export const navLinks = [
     route: "/credits",
     icon: "/assets/icons/bag.svg",
   },
+  {  
+  label: "generating images",
+  
+},
 ];
 
 export const plans = [
