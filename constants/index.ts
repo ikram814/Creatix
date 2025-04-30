@@ -1,11 +1,11 @@
 export const navLinks = [
   {
-    label: "Page Acceuil",
+    label: "Home",
     route: "/",
     icon: "/assets/icons/home.svg",
   },
   {
-    label: "Image Restore ",
+    label: "Image Restore",
     route: "/transformations/add/restore",
     icon: "/assets/icons/image.svg",
   },
