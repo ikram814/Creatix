@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    label: "Home",
+    label: "Page Acceuil",
     route: "/",
     icon: "/assets/icons/home.svg",
   },
@@ -39,7 +39,12 @@ export const navLinks = [
     route: "/credits",
     icon: "/assets/icons/bag.svg",
   },
-
+  
+  {
+    label: " hellllo",
+    route: "/credits",
+    icon: "/assets/icons/bag.svg",
+  },
 
 ];
 
