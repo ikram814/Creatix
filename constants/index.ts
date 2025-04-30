@@ -39,12 +39,7 @@ export const navLinks = [
     route: "/credits",
     icon: "/assets/icons/bag.svg",
   },
-  
-  {
-    label: " hellllo",
-    route: "/credits",
-    icon: "/assets/icons/bag.svg",
-  },
+
 
 ];
 
