@@ -39,10 +39,13 @@ export const navLinks = [
     route: "/credits",
     icon: "/assets/icons/bag.svg",
   },
-  {  
-  label: "generating images",
   
-},
+  {
+    label: " hellllo",
+    route: "/credits",
+    icon: "/assets/icons/bag.svg",
+  },
+
 ];
 
 export const plans = [
