@@ -15,7 +15,7 @@ export const navLinks = [
     icon: "/assets/icons/stars.svg",
   },
   {
-    label: "Object Remove",
+    label: "Supprimer un objet",
     route: "/transformations/add/remove",
     icon: "/assets/icons/scan.svg",
   },
@@ -39,6 +39,13 @@ export const navLinks = [
     route: "/credits",
     icon: "/assets/icons/bag.svg",
   },
+  
+  {
+    label: " hellllo",
+    route: "/credits",
+    icon: "/assets/icons/bag.svg",
+  },
+
 ];
 
 export const plans = [
