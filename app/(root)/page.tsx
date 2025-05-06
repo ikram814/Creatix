@@ -29,7 +29,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
               <p className="p-14-medium text-center text-white">{link.label}</p>
             </Link>
           ))}
-          <Link href="/image-generator" className="flex-center flex-col gap-2">
+          <Link href="/transformations/add/generate-image" className="flex-center flex-col gap-2">
             <li className="flex-center w-fit rounded-full bg-white p-4">
               <Image
                 src="/assets/icons/image.svg"
