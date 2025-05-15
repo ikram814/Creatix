@@ -1,47 +1,69 @@
-import { Collection } from "@/components/shared/Collection"
-import { navLinks } from "@/constants"
-import { getAllImages } from "@/lib/actions/image.actions"
-import Image from "next/image"
-import Link from "next/link"
+import { Collection } from "@/components/shared/Collection";
+import { navLinks } from "@/constants";
+import { getAllImages } from "@/lib/actions/image.actions";
+import Image from "next/image";
+import Link from "next/link";
+import ThemeVideo from "../components/ThemeVideo";
 
 const Home = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
-  const searchQuery = (searchParams?.query as string) || '';
-
-  const images = await getAllImages({ page, searchQuery})
+  const searchQuery = (searchParams?.query as string) || "";
+  const images = await getAllImages({ page, searchQuery });
 
   return (
     <>
-      <section className="home">
-        <h1 className="home-heading">
-          Unleash Your Creative Vision with Imaginify
-        </h1>
-        <ul className="flex-center w-full gap-20">
-          {navLinks.slice(1, 5).map((link) => (
-            <Link
-              key={link.route}
-              href={link.route}
-              className="flex-center flex-col gap-2"
-            >
-              <li className="flex-center w-fit rounded-full bg-white p-4">
-                <Image src={link.icon} alt="image" width={24} height={24} />
-              </li>
-              <p className="p-14-medium text-center text-white">{link.label}</p>
-            </Link>
-          ))}
-        </ul>
+      <section className="w-full flex justify-center items-center py-2 bg-transparent">
+        <ThemeVideo />
       </section>
 
+      <div className="features-container">
+        <Link href="/transformations/add/restore" className="text-center">
+          <div className="circle-3d">
+            <Image src="/assets/icons/restore-3d.png" alt="Image Restore" width={64} height={64} />
+          </div>
+          <p className="feature-text">Image Restore</p>
+        </Link>
+
+        <Link href="/transformations/add/fill" className="text-center">
+          <div className="circle-3d">
+            <Image src="/assets/icons/Fill-3d.png" alt="Generative Fill" width={64} height={64} />
+          </div>
+          <p className="feature-text">Generative Fill</p>
+        </Link>
+
+        <Link href="/transformations/add/remove" className="text-center">
+          <div className="circle-3d">
+            <Image src="/assets/icons/remove-3d.png" alt="Object Remove" width={64} height={64} />
+          </div>
+          <p className="feature-text">Object Remove</p>
+        </Link>
+
+        <Link href="/transformations/add/recolor" className="text-center">
+          <div className="circle-3d">
+            <Image src="/assets/icons/recolor-3d.png" alt="Object Recolor" width={64} height={64} />
+          </div>
+          <p className="feature-text">Object Recolor</p>
+        </Link>
+
+        <Link href="/transformations/add/generate" className="text-center">
+          <div className="circle-3d">
+            <Image src="/assets/icons/generator-3d.png" alt="Image Generator" width={64} height={64} />
+          </div>
+          <p className="feature-text">Image Generator</p>
+        </Link>
+      </div>
+
+      
+
       <section className="sm:mt-12">
-        <Collection 
-          hasSearch={true}
+        <Collection
           images={images?.data}
           totalPages={images?.totalPage}
           page={page}
         />
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

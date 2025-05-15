@@ -40,12 +40,7 @@ export const navLinks = [
     icon: "/assets/icons/bag.svg",
   },
   
-  {
-    label: " hellllo",
-    route: "/credits",
-    icon: "/assets/icons/bag.svg",
-  },
-
+ 
 ];
 
 export const plans = [

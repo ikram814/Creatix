@@ -280,7 +280,37 @@
   }
 
   .collection-card {
-    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-purple-200/15 bg-white p-4 shadow-xl shadow-purple-200/10 transition-all hover:shadow-purple-200/20;
+    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] p-0 transition-all;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .collection-card:hover {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .pinterest-card-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+  }
+
+  .pinterest-card-img:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 8px 32px rgba(58, 139, 253, 0.25);
+    filter: brightness(1.05) drop-shadow(0 0 8px #3a8bfd88);
+    z-index: 2;
+  }
+
+  /* Styles pour le mode sombre */
+  .black-theme .pinterest-card-img:hover {
+    box-shadow: 0 8px 32px rgba(58, 139, 253, 0.4);
+    filter: brightness(1.1) drop-shadow(0 0 12px #3a8bfd);
   }
 
   /* MediaUploader Component */
@@ -374,3 +404,252 @@
   font-weight: 600;
   color: #384262;
 }
+
+/* Black Theme Styles */
+.black-theme {
+  --background: 0 0% 10%;
+  --foreground: 0 0% 90%;
+  --card: 0 0% 15%;
+  --card-foreground: 0 0% 90%;
+  --popover: 0 0% 15%;
+  --popover-foreground: 0 0% 90%;
+  --primary: 0 0% 20%;
+  --primary-foreground: 0 0% 90%;
+  --secondary: 0 0% 25%;
+  --secondary-foreground: 0 0% 90%;
+  --muted: 0 0% 30%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 0 0% 25%;
+  --accent-foreground: 0 0% 90%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 90%;
+  --border: 0 0% 30%;
+  --input: 0 0% 30%;
+  --ring: 0 0% 90%;
+}
+
+/* Styles pour rendre tous les textes en blanc dans le thème noir */
+.black-theme h1,
+.black-theme h2,
+.black-theme h3,
+.black-theme h4,
+.black-theme h5,
+.black-theme h6,
+.black-theme p,
+.black-theme span,
+.black-theme a,
+.black-theme label,
+.black-theme input,
+.black-theme textarea,
+.black-theme button,
+.black-theme li,
+.black-theme td,
+.black-theme th,
+.black-theme div,
+.black-theme .p-16-semibold,
+.black-theme .p-14-medium,
+.black-theme .p-20-semibold,
+.black-theme .h1-semibold,
+.black-theme .h2-bold,
+.black-theme .h3-bold,
+.black-theme .p-24-bold,
+.black-theme .gradient-text,
+.black-theme .sidebar-link,
+.black-theme .cl-userButtonOuterIdentifier {
+  color: white !important;
+}
+
+/* Styles spécifiques pour les champs de saisie */
+.black-theme input::placeholder,
+.black-theme textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.black-theme .auth {
+  @apply bg-gray-900;
+}
+
+.black-theme .root {
+  @apply bg-gray-900;
+}
+
+.black-theme .button {
+  @apply bg-gray-800 text-white hover:bg-gray-700 !important;
+}
+
+.black-theme .sidebar {
+  @apply bg-gray-900;
+}
+
+.black-theme .header {
+  @apply bg-gray-900;
+}
+
+.black-theme .gradient-text {
+  @apply text-gray-300;
+}
+
+.black-theme .input-field {
+  @apply border-gray-700 bg-gray-800 text-white !important;
+}
+
+.black-theme .select-field {
+  @apply border-gray-700 bg-gray-800 text-white !important;
+}
+
+/* Styles pour la sidebar en mode noir */
+.black-theme .sidebar-nav_element:hover .sidebar-link,
+.black-theme .sidebar-nav_element:hover span,
+.black-theme .sidebar-nav_element:hover p {
+  color: black !important;
+  transition: color 0.3s ease;
+}
+
+/* Pour s'assurer que seul le texte change de couleur au survol, pas l'icône */
+.black-theme .sidebar-nav_element:hover img,
+.black-theme .sidebar-nav_element:hover svg {
+  filter: brightness(0) !important;
+  transition: filter 0.3s ease;
+}
+
+/* Maintenir la couleur blanche par défaut pour les éléments de la sidebar */
+.black-theme .sidebar-nav_element .sidebar-link,
+.black-theme .sidebar-nav_element span,
+.black-theme .sidebar-nav_element p {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+/* Styles pour les icônes circulaires */
+.circle-icon {
+  @apply flex items-center justify-center w-20 h-20 rounded-full bg-white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.circle-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-text {
+  @apply text-center text-[15px] font-medium text-gray-700 mt-3;
+}
+
+.features-container {
+  @apply flex flex-wrap justify-center gap-12 mt-8 mb-12;
+}
+
+/* Styles pour les icônes circulaires 3D */
+.circle-3d {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px #3a8bfd11, 0 0 0 2px #e0e7ef inset;
+  transition: 
+    transform 0.22s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.22s,
+    background 0.22s;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  position: relative;
+  filter: drop-shadow(0 2px 8px #3a8bfd11) drop-shadow(0 0 2px #fff);
+}
+
+.circle-3d:hover {
+  transform: scale(1.12) translateY(-8px) rotate(-4deg);
+  box-shadow: 0 8px 24px #3a8bfd22, 0 0 0 4px #3a8bfd11 inset, 0 2px 8px #3a8bfd11;
+  background: #f7faff;
+  z-index: 2;
+}
+
+.circle-3d img, .circle-3d svg, .circle-3d span {
+  width: 64px !important;
+  height: 64px !important;
+  filter: drop-shadow(0 2px 8px #3a8bfd22) drop-shadow(0 0 2px #fff);
+  transition: filter 0.22s, width 0.22s, height 0.22s, transform 0.8s cubic-bezier(.4,2,.6,1);
+}
+
+.circle-3d:hover img, .circle-3d:hover svg {
+  animation: bounce-3d 0.4s;
+  filter: drop-shadow(0 0 8px #3a8bfd33) drop-shadow(0 2px 8px #fff);
+}
+
+@keyframes bounce-3d {
+  0%   { transform: scale(1) rotate(0deg);}
+  30%  { transform: scale(1.13) rotate(-8deg);}
+  60%  { transform: scale(0.98) rotate(5deg);}
+  100% { transform: scale(1) rotate(0deg);}
+}
+
+/* Styles pour les icônes en mode sombre */
+.black-theme .circle-3d {
+  background: #1a1a1a;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 0 2px #333 inset;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 2px #333);
+}
+
+.black-theme .circle-3d:hover {
+  background: #2a2a2a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(58, 139, 253, 0.1) inset, 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.black-theme .circle-3d img, 
+.black-theme .circle-3d svg, 
+.black-theme .circle-3d span {
+  filter: brightness(1.2) drop-shadow(0 2px 8px rgba(58, 139, 253, 0.2)) drop-shadow(0 0 2px #333);
+}
+
+.black-theme .circle-3d:hover img, 
+.black-theme .circle-3d:hover svg {
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(58, 139, 253, 0.3)) drop-shadow(0 2px 8px #333);
+}
+
+/* Styles Masonry et Pinterest pour Collection */
+.masonry {
+  display: flex;
+  margin-left: -1.5rem;
+  width: auto;
+}
+
+.masonry-column {
+  padding-left: 1.5rem;
+  background-clip: padding-box;
+}
+
+.masonry-column > li {
+  margin-bottom: 1.5rem;
+}
+
+.masonry,
+.masonry-column,
+.masonry > li,
+.masonry-column > li {
+  list-style: none !important;
+}
+
+.pinterest-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.pinterest-card-img:hover {
+  transform: scale(1.03) translateY(-4px);
+  box-shadow: 0 8px 32px rgba(58, 139, 253, 0.25), 0 3px 8px rgba(0,0,0,0.12);
+  filter: brightness(1.05) drop-shadow(0 0 8px #3a8bfd88);
+  z-index: 2;
+  border: 2px solid #3a8bfd;
+}
+
+
+
+
+
