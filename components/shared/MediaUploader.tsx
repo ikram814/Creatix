@@ -57,6 +57,7 @@ const MediaUploader = ({
       options={{
         multiple: false,
         resourceType: "image",
+        sources: ['local', 'url', 'unsplash', 'google_drive'],
       }}
       onSuccess={onUploadSuccessHandler}
       onError={onUploadErrorHandler}

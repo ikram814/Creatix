@@ -30,6 +30,11 @@ export const navLinks = [
     icon: "/assets/icons/camera.svg",
   },
   {
+    label: "Image Generator",
+    route: "/image-generator",
+    icon: "/assets/icons/generator.svg",
+  },
+  {
     label: "Profile",
     route: "/profile",
     icon: "/assets/icons/profile.svg",
@@ -39,8 +44,6 @@ export const navLinks = [
     route: "/credits",
     icon: "/assets/icons/bag.svg",
   },
-  
- 
 ];
 
 export const plans = [
