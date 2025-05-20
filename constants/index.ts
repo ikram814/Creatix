@@ -1,6 +1,6 @@
 export const navLinks = [
   {
-    label: "Page Acceuil",
+    label: "Home",
     route: "/",
     icon: "/assets/icons/home.svg",
   },
@@ -15,7 +15,7 @@ export const navLinks = [
     icon: "/assets/icons/stars.svg",
   },
   {
-    label: "Supprimer un objet",
+    label: "Remove  object",
     route: "/transformations/add/remove",
     icon: "/assets/icons/scan.svg",
   },
