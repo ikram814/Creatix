@@ -7,12 +7,13 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "../ui/button"
+import ThemeButton from "@/components/ThemeButton"
 
 const MobileNav = () => {
   const pathname = usePathname();
 
   return (
-    <header className="header">
+    <header className="header fixed top-0 left-0 w-full z-40 bg-white border-b border-gray-200">
       <Link href="/" className="flex items-center gap-2 md:py-2">
         <Image
           src="/assets/images/logo-text.svg"
@@ -24,6 +25,7 @@ const MobileNav = () => {
 
       <nav className="flex gap-2">
         <SignedIn>
+          <ThemeButton className="block lg:hidden" />
           <UserButton afterSignOutUrl="/" />
 
           <Sheet>
