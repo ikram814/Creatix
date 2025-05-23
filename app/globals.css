@@ -486,7 +486,7 @@
 /* Pour s'assurer que seul le texte change de couleur au survol, pas l'icône */
 .black-theme .sidebar-nav_element:hover img,
 .black-theme .sidebar-nav_element:hover svg {
-  filter: brightness(0) !important;
+  filter: none !important;
   transition: filter 0.3s ease;
 }
 

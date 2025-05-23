@@ -27,7 +27,7 @@ export const navLinks = [
   {
     label: "Background Remove",
     route: "/transformations/add/removeBackground",
-    icon: "/assets/icons/backremove-3d.png",
+    icon: "/assets/icons/back-3d.png",
   },
   {
     label: "Image Generator",

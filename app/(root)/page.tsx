@@ -51,6 +51,13 @@ const Home = async ({ searchParams }: SearchParamProps) => {
           </div>
           <p className="feature-text">Image Generator</p>
         </Link>
+
+        <Link href="/transformations/add/removeBackground" className="text-center">
+          <div className="circle-3d">
+            <Image src="/assets/icons/back-3d.png" alt="Background Remove" width={64} height={64} />
+          </div>
+          <p className="feature-text">Background Remove</p>
+        </Link>
       </div>
 
       

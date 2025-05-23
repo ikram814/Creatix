@@ -27,7 +27,7 @@ const ThemeButton = ({ className = "" }) => {
   return (
     <button
       onClick={toggleBlackTheme}
-      className="fixed top-2 right-10  z-50 focus:outline-none"
+      className="fixed top-2 right-28  z-50 focus:outline-none"
       style={{ background: 'transparent' }}
     >
       <div
