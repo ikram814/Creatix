@@ -45,7 +45,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
           <p className="feature-text">Object Recolor</p>
         </Link>
 
-        <Link href="/transformations/add/generate" className="text-center">
+        <Link href="/image-generator" className="text-center">
           <div className="circle-3d">
             <Image src="/assets/icons/generator-3d.png" alt="Image Generator" width={64} height={64} />
           </div>
